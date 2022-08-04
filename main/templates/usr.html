@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Hello User {{session['user']}} 
+    <br>
+    Here is your Transaction History:
+    <br>
+    <table>
+        <tr>
+            <th>Amount </th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction[0] }}</td>
+                <td>{{ transaction[1] }}</td>
+                <td>{{ transaction[2] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
