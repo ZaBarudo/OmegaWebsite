@@ -46,14 +46,21 @@ docker-compose up
 
 ## Working
 
+Run the following command to populate the database
+
+```
+docker exec <ubuntu-container-id> python3 db.py
+```
+> Initially no transactions will exist so make sure to add dummy transactions to transaction history of any user to view it on the website
+
 Type in the following url in a web browser of your choice
 
 ```
 omegabank.local
 ```
 
-You can see the pre-existing summary files in the webpage
-> If no summary files exist, create one by logging into the container and running the genSummary.sh script
+You can see login to see the Transaction History of the user (Password is root for all users)
+
 
 <br>
 
